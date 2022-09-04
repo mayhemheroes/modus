@@ -1,0 +1,7 @@
+project: modus
+target: modusfile
+
+cmds:
+  - cmd: /modusfile
+  - cmd: /modusfile_no_inst @@
+    libfuzzer: false
