@@ -25,3 +25,9 @@ name = "modusfile"
 path = "fuzz_targets/modusfile.rs"
 test = false
 doc = false
+
+[[bin]]
+name = "dockerfile"
+path = "fuzz_targets/dockerfile.rs"
+test = false
+doc = false
