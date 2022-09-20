@@ -1,0 +1,7 @@
+project: modus
+target: dockerfile
+
+cmds:
+  - cmd: /dockerfile
+  - cmd: /dockerfile_no_inst @@
+    libfuzzer: false

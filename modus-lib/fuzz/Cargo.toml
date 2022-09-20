@@ -1,0 +1,33 @@
+[package]
+name = "modus-lib-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.modus-lib]
+path = ".."
+
+# Prevent this from interfering with workspaces
+[workspace]
+members = ["."]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "modusfile"
+path = "fuzz_targets/modusfile.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "dockerfile"
+path = "fuzz_targets/dockerfile.rs"
+test = false
+doc = false
